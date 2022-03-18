@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CommonUtility\CommonUtility.csproj" />
     <ProjectReference Include="..\ReadPriceHistory\ReadPriceHistory.csproj" />
   </ItemGroup>
 

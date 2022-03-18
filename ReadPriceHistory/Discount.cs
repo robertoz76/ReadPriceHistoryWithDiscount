@@ -15,19 +15,19 @@
 
 
         //[0,5,10,15,20,25,30,35,40,45,50]
-        public enum DiscountValue
+        public class DiscountValue
         {
-            D00 = 0,
-            D05 = 1,
-            D10 = 2,
-            D15 = 3,
-            D20 = 4,
-            D25 = 5,
-            D30 = 6,
-            D35 = 7,
-            D40 = 8,
-            D45 = 9,
-            D50 = 10
+            public const string D00 = nameof(D00);
+            public const string D05 = nameof(D05);
+            public const string D10 = nameof(D10);
+            public const string D15 = nameof(D15);
+            public const string D20 = nameof(D20);
+            public const string D25 = nameof(D25);
+            public const string D30 = nameof(D30);
+            public const string D35 = nameof(D35);
+            public const string D40 = nameof(D40);
+            public const string D45 = nameof(D45);
+            public const string D50 = nameof(D50);
         }
     }
 
