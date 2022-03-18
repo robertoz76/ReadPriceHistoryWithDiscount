@@ -2,6 +2,6 @@
 {
     public interface IDiscountManager
     {
-        bool RangeDiscountFree(string eanCode, DateOnly starDiscount, DateOnly endDiscount);
+        void InsertDiscount(string eanCode, DateOnly starDiscount, DateOnly endDiscount);
     }
 }

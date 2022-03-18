@@ -7,5 +7,10 @@
         public DateOnly StopDate { get; set; }
         public Double Price { get; set; }
 
+        public Article()
+        {
+            StartDate = DateOnly.MinValue;
+            StopDate = DateOnly.MaxValue;
+        }
     }
 }

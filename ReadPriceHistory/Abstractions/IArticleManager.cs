@@ -7,5 +7,7 @@
 
         Article GetArticle(string eanCode, DateOnly date);
 
+        // Article Article(string eanCode, DateOnly date);
+
     }
 }

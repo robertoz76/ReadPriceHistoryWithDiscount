@@ -3,11 +3,15 @@
     public class Discount
     {
 
-
-        public Article article { get; set; }
-        public DiscountValue discount { get; set; }
-        public DateOnly startDiscount { get; set; }
-        public DateOnly stopDiscount { get; set; }
+        public string EanCode { get; set; }
+        public DiscountValue Value { get; set; }
+        public DateOnly StartDiscount { get; set; }
+        public DateOnly StopDiscount { get; set; }
+        public Discount()
+        {
+            StartDiscount = DateOnly.MinValue;
+            StopDiscount = DateOnly.MaxValue;
+        }
 
 
         //[0,5,10,15,20,25,30,35,40,45,50]

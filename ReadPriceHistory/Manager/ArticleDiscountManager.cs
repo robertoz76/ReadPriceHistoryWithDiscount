@@ -2,12 +2,10 @@
 
 namespace ReadPriceHistory.Manager
 {
-    public class DiscountManager : IDiscountManager
+    public class ArticleDiscountManager : IArticleDiscountManager
     {
-
-        public void InsertDiscount(string eanCode, DateOnly starDiscount, DateOnly endDiscount)
+        public ArticleDiscount GetArticleDiscount(string eanCode, DateOnly date)
         {
-
             throw new NotImplementedException();
         }
     }
