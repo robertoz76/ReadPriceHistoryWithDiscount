@@ -3,7 +3,7 @@
 namespace ReadPriceHistoryTest
 {
 
-    public class DiscountTest
+    public class DiscountTests
     {
         // sconto range date valido per il periodo dell'articolo
         // range sovrapposto a periodo già presenti
