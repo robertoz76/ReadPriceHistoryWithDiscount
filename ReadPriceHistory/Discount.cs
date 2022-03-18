@@ -7,27 +7,40 @@
         public DiscountValue Value { get; set; }
         public DateOnly StartDiscount { get; set; }
         public DateOnly StopDiscount { get; set; }
-        public Discount()
+        public Discount(string eanCode, DateOnly dtStartDiscount, DateOnly dtStopDiscount, DiscountValue discount)
         {
-            StartDiscount = DateOnly.MinValue;
-            StopDiscount = DateOnly.MaxValue;
+            if (String.IsNullOrEmpty(eanCode))
+                throw new ArgumentNullException(nameof(eanCode));
+            if (dtStartDiscount == DateOnly.MaxValue)
+                throw new ArgumentOutOfRangeException(nameof(dtStartDiscount));
+            if (dtStopDiscount == DateOnly.MinValue)
+                throw new ArgumentOutOfRangeException(nameof(dtStopDiscount));
+            if (dtStartDiscount > dtStopDiscount)
+                throw new ArgumentOutOfRangeException(nameof(dtStartDiscount) + "," + nameof(dtStopDiscount));
+            //if (discount <= 0)
+            //    throw new ArgumentOutOfRangeException(nameof(discount));
+            StartDiscount = dtStartDiscount;
+            StopDiscount = dtStopDiscount;
+            Value = discount;
+            EanCode = eanCode;
         }
 
 
         //[0,5,10,15,20,25,30,35,40,45,50]
-        public class DiscountValue
+
+        public enum DiscountValue
         {
-            public const string D00 = nameof(D00);
-            public const string D05 = nameof(D05);
-            public const string D10 = nameof(D10);
-            public const string D15 = nameof(D15);
-            public const string D20 = nameof(D20);
-            public const string D25 = nameof(D25);
-            public const string D30 = nameof(D30);
-            public const string D35 = nameof(D35);
-            public const string D40 = nameof(D40);
-            public const string D45 = nameof(D45);
-            public const string D50 = nameof(D50);
+            D00 = 0,
+            D05 = 5,
+            D10 = 10,
+            D15 = 15,
+            D20 = 20,
+            D25 = 25,
+            D30 = 30,
+            D35 = 35,
+            D40 = 40,
+            D45 = 45,
+            D50 = 50
         }
     }
 

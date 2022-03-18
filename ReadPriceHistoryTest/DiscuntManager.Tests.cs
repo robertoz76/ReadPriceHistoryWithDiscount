@@ -9,10 +9,14 @@ namespace ReadPriceHistoryTest
 
         [Fact]
         public void DM_RangeDiscountDateInvalid_false()
-        { }
+        {
+
+
+        }
 
         [Fact]
         public void DM_RangeDiscountDateOverLaying_false()
-        { }
+        {
+        }
     }
 }
